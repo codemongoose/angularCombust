@@ -1,23 +1,51 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
+  <h1 ng-href="#/">Combust JS</h1>
   <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+    Add Rocket Fuel to your Apps !
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+<div class="container">
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Basic Methods</h3>
+  </div>
+  <div class="panel-body">
+    
+    <div class="row marketing">
+      <div><input type="text" class="form-control" ng-model="message.text"/></div>
+      </br>
+      <button type="button" class="btn btn-success" ng-click="setMessage()">Set Message</button>
+      <button type="button" class="btn btn-warning" ng-click="updateMessage()">Update</button>
+      <button type="button" class="btn btn-danger" ng-click="deleteMessage()">Delete</button>
+    </div>
+  
+  </div>
+</div>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Example Chat Application with .push( )</h3>
+  </div>
+  <div class="panel-body">
+    <!-- Panel content -->
+
+     <div ng-repeat="msg in messages">
+     {{msg.user}} : {{msg.text}}
+    </div>
+
+
+    <div class="row marketing">
+      <div>User:<input type="text" class="form-control" ng-model="msgUser"/></div>
+      </br>
+      <div>Message:<input type="text" class="form-control" ng-model="msgText"/></div>
+      </br>
+      <button type="button" class="btn btn-primary" ng-click="sendMessage()">Send Message</button>
+    </div>
+  </div>
+</div>
+
+
 </div>
